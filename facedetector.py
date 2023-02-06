@@ -1,8 +1,8 @@
 import cv2
 
 # Load the cascade classifier
-face_cascade = cv2.CascadeClassifier(r"C:\Users\sean2\OneDrive\Desktop\Python CV Projects\haarcascade_frontalface_default.xml")
-body_cascade = cv2.CascadeClassifier(r"C:\Users\sean2\OneDrive\Desktop\Python CV Projects\haarcascade_fullbody.xml")
+face_cascade = cv2.CascadeClassifier(r"C:\Users\sean2\OneDrive\Desktop\Python Projects\haarcascade_frontalface_default.xml")
+body_cascade = cv2.CascadeClassifier(r"C:\Users\sean2\OneDrive\Desktop\Python Projects\haarcascade_fullbody.xml")
 
 # Open the camera
 cap = cv2.VideoCapture(0)
