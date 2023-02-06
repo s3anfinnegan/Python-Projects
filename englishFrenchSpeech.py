@@ -39,8 +39,8 @@ p.terminate()
 
 print("Stopped recording")
 
-timestamp = str(int(time.time()))
-filename = "output_" + timestamp + ".wav"
+#timestamp = str(int(time.time()))
+filename = "audioEN.wav"
 
 wf = wave.open(filename, 'wb')
 wf.setnchannels(CHANNELS)
