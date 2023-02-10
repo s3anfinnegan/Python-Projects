@@ -1,6 +1,9 @@
 import cv2
 import numpy as np
 
+#Might use this as a summer project and connect to a DJI drone
+#for detecting intensities in traffic within Galway City
+
 # Load the video
 video = cv2.VideoCapture("traffic.mp4")
 
