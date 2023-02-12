@@ -77,4 +77,4 @@ with open("french.txt", "r") as file:
     text = file.read()
 
 tts = gTTS(text, lang='fr')
-tts.save("audio.wav")
+tts.save("audioFR.wav")

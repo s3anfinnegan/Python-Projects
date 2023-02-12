@@ -1,1 +1,0 @@
-hi my name is Sean Finnegan I'm 21 years old and I've spent this weekend developing a simple five-step Python script that translate my English voice note into a French voicemail

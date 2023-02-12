@@ -5,7 +5,7 @@ from gtts import gTTS
 #with additional functionality, we will be able to translate
 #into a French .wav file (hopefully!)
 
-with open('test.txt', mode='r') as file:
+with open('english.txt', mode='r') as file:
     text = file.read()
 
 translator = Translator(to_lang="fr")
