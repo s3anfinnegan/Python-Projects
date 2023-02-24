@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seán's AI</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Seán's AI</h1>
+      <h2>Powered by OpenAI API</h2>
+      <form id="prompt-form">
+        <div class="form-group">
+          <label for="input-prompt">Input Prompt:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="input-prompt"
+            name="input-prompt"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Generate Prompt</button>
+      </form>
+      <div id="response" class="mt-3"></div>
+    </div>
+
+    <script>
+      // Handle form submission
+      $("#prompt-form").submit(function (event) {
+        // Prevent default form submission behavior
+        event.preventDefault();
+
+        // Get input prompt text
+        var inputText = $("#input-prompt").val();
+
+        // Send POST request to /prompt endpoint with input prompt text
+        $.ajax({
+          type: "POST",
+          url: "/prompt",
+          contentType: "application/json",
+          data: JSON.stringify({ input_string: inputText }),
+          success: function (response) {
+            // Display response in #response div
+            $("#response").html("<p>" + response.response + "</p>");
+          },
+          error: function (error) {
+            // Display error message in #response div
+            $("#response").html("<p>Error: " + error.responseText + "</p>");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
