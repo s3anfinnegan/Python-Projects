@@ -4,7 +4,7 @@ import os
 
 # Initialize Flask app and OpenAI API credentials
 app = Flask(__name__)
-openai.api_key = os.environ["OPENAI_API_KEY"] = "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"
+openai.api_key = os.environ["OPENAI_API_KEY"] = "keygoeshere"
 print(os.environ["OPENAI_API_KEY"])
 
 # Define default route with GET method
